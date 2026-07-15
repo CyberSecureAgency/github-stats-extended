@@ -19,6 +19,10 @@ cp -RP packages/core/build/. apps/backend/.vercel/output/functions/api.func/node
 cp packages/core/package.json apps/backend/.vercel/output/functions/api.func/node_modules/@stats-organization/github-readme-stats-core/
 
 cp -RP apps/backend/.vercel/output/functions/api.func/_dot_vercel_copy/output apps/backend/.vercel/
+
+# remove empty sub-function directories that intercept routes
+find apps/backend/.vercel/output/functions/api -name "*.func" -type d -exec rm -rf {} + 2>/dev/null || true
+
 rm -rf apps/deployment
 pnpm install
 pnpm build:frontend
