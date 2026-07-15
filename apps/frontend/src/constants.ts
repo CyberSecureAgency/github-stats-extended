@@ -1,6 +1,6 @@
 export const USE_LOGGER = true as boolean;
 
-export const CLIENT_ID = "Ov23lilAc5biyyRY0K1u";
+export const CLIENT_ID = "Ov23linq46zVSmM8b1Dn";
 
 export const HOST = window.location.host;
 
